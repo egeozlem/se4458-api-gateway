@@ -1,0 +1,21 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/v1.0/flight/querryFlight{?page,pageSize}",
+      "UpstreamPathTemplate": "/gateway/flight/querryFlight{?page,pageSize}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",  
+          "Port": 5086
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "Timeout": 5000,
+      "Retries": 3
+    }
+  ],
+  "GlobalConfiguration": {
+  "BaseUrl":  "https://localhost:5200"
+ }
+}

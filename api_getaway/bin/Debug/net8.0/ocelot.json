@@ -1,0 +1,24 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/v1.0/flight/querryFlight{?page,pageSize}",
+      "UpstreamPathTemplate": "/gateway/flight/querryFlight{?page,pageSize}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",  
+          "Port": 5086
+        }
+      ],
+      "UpstreamHostAndPorts": [
+        {
+          "Host": "localhost",  
+          "Port": 5000
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "Timeout": 5000,
+      "Retries": 3
+    }
+  ]
+}

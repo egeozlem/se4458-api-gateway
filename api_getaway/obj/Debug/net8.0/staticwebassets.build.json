@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mbJZAVzSqBgGkRm16Pb18IfU+7joeQiXvSsPvpJa6uY=",
+  "Source": "api_getaway",
+  "BasePath": "_content/api_getaway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
