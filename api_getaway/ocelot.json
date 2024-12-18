@@ -1,21 +1,46 @@
 {
-  "ReRoutes": [
+  "Routes": [
     {
-      "DownstreamPathTemplate": "/api/v1.0/flight/querryFlight{?page,pageSize}",
-      "UpstreamPathTemplate": "/gateway/flight/querryFlight{?page,pageSize}",
+      "DownstreamPathTemplate": "/api/v1.0/flight/querryFlight",
+      "UpstreamPathTemplate": "/gateway/flight/querryFlight",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "host.docker.internal",  
+          "Host": "host.docker.internal",
           "Port": 5086
         }
       ],
-      "UpstreamHttpMethod": [ "GET" ],
-      "Timeout": 5000,
-      "Retries": 3
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/flight/insertFlight",
+      "UpstreamPathTemplate": "/gateway/flight/insertFlight",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 5086
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/flight/AdminQuerry",
+      "UpstreamPathTemplate": "/gateway/flight/AdminQuerry",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 5086
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
     }
+    
+
   ],
+
   "GlobalConfiguration": {
-  "BaseUrl":  "https://localhost:5200"
- }
+    "BaseUrl": "https://localhost:5200"
+  }
 }
